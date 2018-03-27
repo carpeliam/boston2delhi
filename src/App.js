@@ -1,13 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ObjectButton from './ObjectButton';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <View style={styles.row}>
+          <ObjectButton id="top left" backgroundColor="powderblue" />
+          <ObjectButton id="top center" backgroundColor="skyblue" />
+          <ObjectButton id="top right" backgroundColor="steelblue" />
+        </View>
+        <View style={styles.row}>
+          <ObjectButton id="middle left" backgroundColor="steelblue" />
+          <ObjectButton id="middle center" backgroundColor="powderblue" />
+          <ObjectButton id="middle right" backgroundColor="skyblue" />
+        </View>
+        <View style={styles.row}>
+          <ObjectButton id="bottom left" backgroundColor="skyblue" />
+          <ObjectButton id="bottom center" backgroundColor="steelblue" />
+          <ObjectButton id="bottom right" backgroundColor="powderblue" />
+        </View>
       </View>
     );
   }
@@ -16,8 +29,10 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'stretch',
+  },
+  row: {
+    flexDirection: 'row',
+    flex: 1,
   },
 });
