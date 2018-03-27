@@ -5,9 +5,9 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "jest": "^22.0.3",
-    "jest-cli": "^22.0.3",
-    "jest-expo": "23.0.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "jest-expo": "25.0.0",
     "react-native-scripts": "1.8.1",
     "react-scripts": "^1.0.17",
     "react-test-renderer": "16.0.0",
@@ -20,7 +20,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "eject": "react-native-scripts eject",
-    "test": "node_modules/.bin/jest --watch",
+    "test": "jest --watch",
     "build:web": "webpack --config webpack.config.web.js",
     "deploy": "npm run build:web&&gh-pages -d public"
   },
